@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="btn">Home</a>
+        <h2>Lista de Usuarios</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>País</th>
+                <th>Estado</th>
+                <th>Género</th>
+                <th>Peso (kg)</th>
+                <th>Altura (cm)</th>
+                <th>Grasa Corporal (%)</th>
+                <th>Objetivo</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.country }}</td>
+                <td>{{ user.state }}</td>
+                <td>{{ user.gender }}</td>
+                <td>{{ user.body_weight_kg }}</td>
+                <td>{{ user.height_cm }}</td>
+                <td>{{ user.body_fat_percentage }}</td>
+                <td>{{ user.training_goal }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

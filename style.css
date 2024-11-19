@@ -1,0 +1,20 @@
+body {
+    background-color: #566573; /* Fondo gris oscuro */
+    color: #5DADE2; /* Letras azules */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #5DADE2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3498DB;
+}

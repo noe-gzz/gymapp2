@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Exercise Glossary</h1>
+<ul>
+    {% for item in glossary_items %}
+    <li>
+        <h2>{{ item.exercise_name }}</h2>
+        <p>{{ item.description }}</p>
+        {% if item.animation_url %}
+        <img src="{{ item.animation_url }}" alt="{{ item.exercise_name }} animation">
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

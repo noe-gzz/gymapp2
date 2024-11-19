@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="btn">Home</a>
+        <h2>Bienvenido, Usuario</h2>
+        <table>
+            <tr>
+                <th>Fecha</th>
+                <th>Ejercicio</th>
+                <th>Peso (kg)</th>
+                <th>Repeticiones</th>
+                <th>Series</th>
+                <th>Músculo Entrenado</th>
+            </tr>
+            {% for exercise in exercises %}
+            <tr>
+                <td>{{ exercise.date }}</td>
+                <td>{{ exercise.exercise_name }}</td>
+                <td>{{ exercise.weight_kg }}</td>
+                <td>{{ exercise.reps }}</td>
+                <td>{{ exercise.sets }}</td>
+                <td>{{ exercise.muscle_group }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
